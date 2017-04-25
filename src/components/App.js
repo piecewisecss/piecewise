@@ -38,28 +38,12 @@ function App({ children, routes }) {
 
   return (
     <div style={s.root}>
-      <h1 style={s.title}>Single Page Apps for GitHub Pages</h1>
-      <Interactive
-        as="a"
-        href="https://github.com/rafrex/spa-github-pages"
-        style={s.repoLink}
-        {...s.link}
-      >https://github.com/rafrex/spa-github-pages</Interactive>
+      <h1>Linear Font Size</h1>
       <nav style={s.mapMenu}>
         {generateMapMenu()}
       </nav>
       {children}
       <div style={s.creditLine}>
-        <Interactive
-          as="a"
-          href="http://www.rafaelpedicini.com"
-          interactiveChild
-          focus={{}}
-          touchActive={{}}
-          touchActiveTapOnly
-        >
-          Code and concept by <span {...s.childLink}>Rafael Pedicini</span>
-        </Interactive>
       </div>
     </div>
   );

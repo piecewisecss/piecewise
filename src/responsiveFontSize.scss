@@ -1,0 +1,24 @@
+@import '~breakpoint-sass';
+
+@mixin linearFontSize($smallSize, $largeSize, $pxMin, $pxMax){
+    $smWidth: stripUnit($pxMin) * 1px;
+    $lgWidth: stripUnit($pxMax) * 1px;
+    @include breakpoint($lgWidth){
+        font-size: $largeSize * 1px;
+    }
+    @include breakpoint(($smWidth $lgWidth)){
+        $small: stripUnit($smallSize);
+        $large: stripUnit($largeSize);
+        font-size: calc(#{$smallSize * 1px} + (100vw - #{$pxMin * 1px})/#{($pxMax - $pxMin)/($largeSize - $smallSize)});
+    }
+    @include breakpoint((max-width $smWidth)){
+        font-size: $smallSize * 1px;
+    }
+}
+
+@function stripUnit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}

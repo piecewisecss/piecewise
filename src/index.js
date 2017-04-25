@@ -8,6 +8,7 @@ import PageNotFound from './components/PageNotFound';
 import ExampleComponent from './components/ExampleComponent';
 import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
 
+require('./main.scss');
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>

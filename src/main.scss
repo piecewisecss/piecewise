@@ -1,0 +1,5 @@
+@import 'responsiveFontSize';
+
+h1 {
+  @include linearFontSize(24, 48, 480, 1200);
+}
