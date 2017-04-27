@@ -1,5 +1,6 @@
-@import 'responsiveFontSize';
+@import 'linearFontSize';
 
 h1 {
-  @include linearFontSize(24, 48, 480, 1200);
+    @include linearFontSize(24, 48, 480, 1200);
+    font-weight: bold;
 }
