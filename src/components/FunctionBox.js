@@ -9,9 +9,10 @@ export default class FunctionBox extends React.Component{
   }
   render(){
     // console.log('state', this.state);
-    let { width } = this.state, calc = `${this.state.width}`;
+    let { width } = this.state, calc = `24px + ((${width}px - 480px) / (1200px - 480px)) / (48px - 24px) = ` + (24 + (width - 480) / (1200 - 480) / (48 - 24)).toString().split('.')[0] + 'px';
     return (
       <div className='functionBox'>
+        <div className='currentWidth'>{width}</div>
         <div className='calc'>
           <div className='calcLeft'>f(x) =</div>
           <div className='calcRight'>
