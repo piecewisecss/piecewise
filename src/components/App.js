@@ -38,7 +38,8 @@ function App({ children, routes }) {
 
   return (
     <div style={s.root}>
-      <h1>Linear Font Size</h1>
+      <h1>PiecewiseCSS</h1>
+      <div className='subtitle'>Responsive design fast & easy</div>
       <nav style={s.mapMenu}>
         {generateMapMenu()}
       </nav>

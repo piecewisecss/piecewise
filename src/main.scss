@@ -1,6 +1,12 @@
-@import 'linearFontSize';
+@import 'piecewise';
 
+#root {
+    background-color: #C7E1FF;
+}
 h1 {
-    @include linearFontSize(24, 48, 480, 1200);
+    @include piecewise(font-size, 24, 48, 480, 1200);
     font-weight: bold;
+}
+.subtitle {
+    font-size: 16px;
 }
