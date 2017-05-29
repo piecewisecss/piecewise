@@ -18,7 +18,12 @@ export default class FunctionBox extends React.Component{
           <div className='calcLeft'>f(x) =</div>
           <div className='calcRight'>
             <div className='calcTop' style={ width > 1199 ? {color: 'black', fontWeight: 'bold'} : {color: 'grey'}}>48px</div>
-            <div className='calcMid' style={ 480 < width && width < 1200 ? {color: 'black', fontWeight: 'bold'} : {color: 'grey'}}>{ calc }</div>
+            <div className='calcMid' style={ 480 < width && width < 1200 ? {color: 'black', fontWeight: 'bold'} : {color: 'grey'}}>
+              { calc }
+              <div className='finalCalc' style={ 480 < width && width < 1200 ? {color: 'black', fontWeight: 'bold'} : {color: 'grey'}}>
+                { calc }
+              </div>
+            </div>
             <div className='calcBot' style={ width < 481 ? {color: 'black', fontWeight: 'bold'} : {color: 'grey'}}>24px</div>
           </div>
         </div>

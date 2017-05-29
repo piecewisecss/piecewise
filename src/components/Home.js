@@ -3,6 +3,7 @@ import Interactive from 'react-interactive';
 import { Link } from 'react-router';
 import s from '../styles/home.style';
 import FunctionBox from './FunctionBox';
+import npmInstall from './npmInstall';
 
 function Home() {
   const repoReadmeLink = text => (
@@ -15,6 +16,7 @@ function Home() {
 
   return (
     <div className='homepage'>
+      <div className='npmInstall'>$ npm install piecewisecss</div>
       <FunctionBox />
     </div>
   );

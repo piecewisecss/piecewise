@@ -11,6 +11,12 @@ h1 {
 .subtitle {
     font-size: 16px;
 }
+.npmInstall {
+    font-family: Consolas, "Liberation Mono", Menlo, Monaco, Courier, monospace;
+    text-align: center;
+    margin-top: 4rem;
+    background-color: #F0F0F0;
+}
 .functionBox * {
     font-family: 'Times New Roman', Times, serif;
 }
@@ -32,6 +38,11 @@ h1 {
             @include omega();
             >div {
                 margin-bottom: 1rem;
+            }
+            .calcMid {
+                .finalCalc {
+
+                }
             }
         }
     }
