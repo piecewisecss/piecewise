@@ -3,10 +3,10 @@ import Interactive from 'react-interactive';
 import { Link } from 'react-router';
 import s from '../styles/app.style';
 
-const propTypes = {
-  children: PropTypes.element.isRequired,
-  routes: PropTypes.array.isRequired,
-};
+// const propTypes = {
+//   children: PropTypes.element.isRequired,
+//   routes: PropTypes.array.isRequired,
+// };
 
 function App({ children, routes }) {
   function generateMapMenu() {
@@ -40,9 +40,9 @@ function App({ children, routes }) {
     <div style={s.root}>
       <h1>PiecewiseCSS</h1>
       <div className='subtitle'>Responsive design fast & easy</div>
-      <nav style={s.mapMenu}>
-        {generateMapMenu()}
-      </nav>
+      {/*<nav style={s.mapMenu}>*/}
+        {/*{generateMapMenu()}*/}
+      {/*</nav>*/}
       {children}
       <div style={s.creditLine}>
       </div>
@@ -50,6 +50,6 @@ function App({ children, routes }) {
   );
 }
 
-App.propTypes = propTypes;
+// App.propTypes = propTypes;
 
 export default App;

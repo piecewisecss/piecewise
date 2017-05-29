@@ -1,15 +1,15 @@
 {
-  "name": "spa-github-pages",
+  "name": "piecewisecss.github.io",
   "version": "4.0.0",
-  "description": "Single Page Apps for GitHub Pages",
+  "description": "PiecewiseCSS Demo Site",
   "scripts": {
     "start": "webpack-dev-server -d --inline --host 0.0.0.0 --history-api-fallback --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafrex/spa-github-pages.git"
+    "url": ""
   },
-  "author": "Rafael Pedicini <code@rafrex.com>",
+  "author": "John Fiorilla",
   "license": "MIT",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
@@ -33,8 +33,9 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.8.0",
     "node-sass": "^4.5.2",
-    "sass-loader": "^6.0.3",
+    "sass-loader": "^6.0.5",
     "style-loader": "^0.16.1",
+    "susy": "^2.2.12",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   }

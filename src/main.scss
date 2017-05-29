@@ -1,4 +1,5 @@
 @import 'piecewise';
+@import '~susy/sass/susy';
 
 #root {
     background-color: #C7E1FF;
@@ -12,4 +13,20 @@ h1 {
 }
 .functionBox * {
     font-family: 'Times New Roman', Times, serif;
+}
+.functionBox {
+    margin-top: 4rem;
+    border: 1px solid black;
+    padding: 1rem;
+    display: inline-block;
+    .calcLeft {
+        @include span(2 of 12);
+    }
+    .calcRight {
+        @include span(10 of 12);
+        @include omega();
+        >div {
+            margin-bottom: 1rem;
+        }
+    }
 }
