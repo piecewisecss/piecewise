@@ -5,7 +5,7 @@
     background-color: #C7E1FF;
 }
 h1 {
-    @include piecewise(font-size, 24, 48, 480, 1200);
+    @include piecewise(font-size, 24, 48, 480, 1000);
     font-weight: bold;
 }
 .subtitle {
@@ -25,25 +25,56 @@ h1 {
     .currentWidth {
         display: inline-block;
         float: right;
+        color: green;
     }
     .calc {
         border: 1px solid black;
         padding: 1rem;
         display: inline-block;
-        .calcLeft {
-            @include span(2 of 12);
+        .calcTop, .calcMid, .calcBot {
+            margin: 0.5rem 0;
+            display: inline-block;
+            width: 100%;
         }
-        .calcRight {
-            @include span(10 of 12);
-            @include omega();
-            >div {
-                margin-bottom: 1rem;
+        .left {
+            @include span(2 of 12);
+            font-weight: bold;
+            // padding-left: 10px;
+        }
+        .mid {
+            @include span(8 of 12);
+            .base {
+                @include span(2 of 12);
+                min-width: 48px;
             }
-            .calcMid {
-                .finalCalc {
-
+            .equation {
+                @include span(9 of 12);
+                @include omega();
+                span {
+                    color: green;
                 }
             }
         }
+        .right {
+            @include span(2 of 12);
+            @include omega();
+            // padding-right: 10px;
+            &::before {
+                content: "=";
+                margin-right: 10px;
+            }
+        }
+        .midLeft, .botLeft {
+            opacity: 0;
+        }
     }
+}
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
